@@ -222,7 +222,7 @@ class Nucleus_2D_Segmentation:
              
 
     
-
+#Setup Analysis object
 Nucleus_Segment = Nucleus_2D_Segmentation(directory)
 
 #Extract all images and combine into 1 list
@@ -235,10 +235,10 @@ Nucleus_Segment.MIP_DOG(sigma1=10,sigma2=1)
 Nucleus_Segment.cell_pose_segmentation()
 
 #Remove touching object and small object
-#Nucleus_Segment.remove_touch_small(minimum_size= 600)
+Nucleus_Segment.remove_touch_small(minimum_size= 600)
 
 # Statistic Quantification
-#Nucleus_Segment.intensity_Quantification_Multiple()
+Nucleus_Segment.intensity_Quantification_Multiple()
 
 # Add labels with text to images
 properties = {
